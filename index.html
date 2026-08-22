@@ -72,44 +72,61 @@ button{font:inherit}
 .life{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}.life-card{position:relative;aspect-ratio:.82;border-radius:26px;overflow:hidden;border:1px solid var(--line)}.life-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.life-card:hover img{transform:scale(1.045)}.life-card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(5,8,13,.88))}.life-card span{position:absolute;z-index:2;left:18px;bottom:16px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.life-intro{max-width:760px;color:#9eabbc;line-height:1.7;font-size:1.05rem}
 .openness{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}.openness span{border:1px solid var(--line);border-radius:999px;padding:9px 12px;color:#b7c1d1;font-size:.68rem}
 @media(max-width:900px){.life{grid-template-columns:1fr 1fr}.portrait-wrap{min-height:520px}.portrait{width:min(80%,430px)}}@media(max-width:560px){.life{grid-template-columns:1fr 1fr;gap:9px}.life-card{border-radius:18px}.project-logo{width:100px}.portrait-wrap{min-height:430px}}
+
+/* v5 structure: modelling feature + two project cards */
+.model-feature{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:linear-gradient(150deg,#111d2d,#090e17 72%);margin-bottom:18px;box-shadow:0 30px 80px rgba(0,0,0,.22)}
+.model-feature-copy{padding:40px 42px 30px}.model-feature h3{font-size:clamp(2.7rem,5.4vw,5.8rem);line-height:.92;letter-spacing:-.06em;margin:16px 0 20px;max-width:900px}.model-feature p{color:#a4b0c1;max-width:820px;line-height:1.7;font-size:1.03rem}.model-video{width:100%;aspect-ratio:16/7;overflow:hidden;border-top:1px solid var(--line);background:#06090f}.model-video video{width:100%;height:100%;object-fit:cover;display:block}
+.project-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}.project-compact{min-height:590px}.project-compact .project-logo-center{position:absolute;left:50%;right:auto;top:54%;width:min(46%,230px);max-height:150px;transform:translate(-50%,-50%);object-fit:contain}.project-compact:first-child{background:radial-gradient(circle at 70% 58%,rgba(117,230,255,.09),transparent 34%),linear-gradient(150deg,#111d2d,#0a1019)}.project-compact:nth-child(2){background:linear-gradient(150deg,#201b35,#101321)}
+@media(max-width:900px){.project-pair{grid-template-columns:1fr}.model-feature-copy{padding:30px}.model-video{aspect-ratio:16/10}.project-compact{min-height:560px}}
+@media(max-width:560px){.model-feature-copy{padding:25px}.model-video{aspect-ratio:4/3}.project-compact .project-logo-center{width:48%}}
+
 </style>
 </head>
 <body>
 <div class="noise"></div><div class="ambient"></div><div class="grid-bg"></div>
-<div class="nav-wrap"><nav class="nav"><a class="brand" href="#top"><span class="brand-dot"></span>Jacobo Gabeiras</a><div class="nav-links"><a href="#work">Work</a><a href="#research">Focus</a><a href="#papers">Papers</a><a href="#about">About</a><a href="#outside">Outside work</a></div><a class="cv-btn" href="Jacobo_Gabeiras_CV.pdf" target="_blank">Download CV ↗</a></nav></div>
+<div class="nav-wrap"><nav class="nav"><a class="brand" href="#top"><span class="brand-dot"></span>Jacobo Gabeiras</a><div class="nav-links"><a href="#work">Work</a><a href="#papers">Papers</a><a href="#about">About</a><a href="#outside">Outside work</a></div><a class="cv-btn" href="assets/docs/Jacobo_Gabeiras_CV.pdf" target="_blank">Download CV ↗</a></nav></div>
 <main id="top">
 <section class="hero wrap">
   <div class="hero-copy reveal">
-    <div class="eyebrow">Modelling · Climate adaptation · Machine learning</div>
-    <h1>Physics,<span class="outline">data &</span><span class="accent">possibility.</span></h1>
-    <p class="hero-intro">I’m Jacobo Gabeiras, an environmental physicist and modeller. My PhD focused on urban climate and heat adaptation, but I’m interested in broader problems where physical modelling, data, Earth observation and machine learning can make complex systems more understandable and useful.</p>
+    <div class="eyebrow">High-resolution modelling · Climate adaptation · Machine learning</div>
+    <h1>Models,<span class="outline">data &</span><span class="accent">climate.</span></h1>
+    <p class="hero-intro">I’m Jacobo Gabeiras, an environmental physicist specialising in high-resolution numerical modelling, climate adaptation, Earth Observation and scientific computing, with experience applying machine learning to environmental data and modelling workflows.</p>
     <div class="actions"><a class="btn primary" href="#work">Explore my work →</a><a class="btn" href="mailto:jacobogabeiras@gmail.com">Get in touch</a></div>
-    <div class="hero-meta"><span>PhD · Environmental Physics</span><span>Modelling + ML</span><span>Open to new directions</span></div>
+    <div class="hero-meta"><span>PhD · Environmental Physics</span><span>WRF · Earth Observation</span><span>Python · Machine Learning</span></div>
   </div>
-  <div class="portrait-wrap reveal"><img class="portrait" src="jacobo.jpg" alt="Portrait of Jacobo Gabeiras"><div class="float-card f1"><small>Background</small><strong>Physics</strong></div><div class="float-card f2"><small>Current toolkit</small><strong>Models · Data · ML</strong></div></div>
+  <div class="portrait-wrap reveal"><img class="portrait" src="assets/images/jacobo.jpg" alt="Portrait of Jacobo Gabeiras"><div class="float-card f1"><small>Background</small><strong>Physics</strong></div><div class="float-card f2"><small>Current toolkit</small><strong>Models · Data · ML</strong></div></div>
   <div class="scroll-note">Scroll to explore ↓</div>
 </section>
 <div class="marquee"><div class="marquee-track"><span>Physical modelling <b>✦</b> Climate adaptation <b>✦</b> Earth Observation <b>✦</b> Python <b>✦</b> Geospatial data <b>✦</b> Machine Learning <b>✦</b> Scientific software <b>✦</b> Open Science <b>✦</b> Physical modelling <b>✦</b> Climate adaptation <b>✦</b> Earth Observation <b>✦</b> Python <b>✦</b> Geospatial data <b>✦</b> Machine Learning <b>✦</b> Scientific software <b>✦</b> Open Science <b>✦</b></span></div></div>
 <section id="work" class="section wrap">
-  <div class="section-head reveal"><div class="section-index">01 — Selected work</div><h2 class="section-title">Models, tools and <em>real-world systems.</em></h2></div>
-  <p class="focus-line reveal">My recent work grew out of urban climate, but the thread running through it is broader: <strong>building physical and data-driven models, turning complex datasets into useful inputs, and making scientific workflows reproducible.</strong></p>
-  <div class="projects">
-    <article class="project large reveal"><div class="project-copy"><div class="project-kicker">Modelling + scientific software</div><h3>WRFUP</h3><p>An open-source Python package that automates Earth Observation-based urban parameter generation and ingestion for WRF. The Grenoble 3D model below shows the kind of high-resolution urban representation behind this work.</p><div class="tags"><span class="tag">Python</span><span class="tag">Physical modelling</span><span class="tag">WRF</span><span class="tag">Earth Observation</span></div></div><img class="project-logo" src="https://raw.githubusercontent.com/jacobogabeiraspenas/wrfup/main/docs/source/_static/logo_wrfup.png" alt="WRFUP logo"><div class="project-media"><video autoplay muted loop playsinline preload="metadata"><source src="grenoble-model.mp4" type="video/mp4"></video></div><a class="project-link" href="https://github.com/jacobogabeiraspenas/wrfup" target="_blank"><span>→</span> Explore WRFUP</a></article>
-    <article class="project reveal"><div class="project-copy"><div class="project-kicker">Earth observation + machine learning</div><h3>Global Urban Surface ML</h3><p>A workflow for estimating urban morphology from Earth Observation and LiDAR, connecting machine learning with model-ready physical descriptors.</p></div><div class="project-media"><img src="gus-ml.png" alt="Global Urban Surface ML example over Grenoble"></div><a class="project-link" href="https://github.com/jacobogabeiraspenas/global-urban-surface-ml" target="_blank"><span>→</span> View repository</a></article>
-    <article class="project reveal"><div class="project-copy"><div class="project-kicker">Climate adaptation</div><h3>Heat & resilient cities</h3><p>High-resolution modelling of heatwaves and adaptation strategies, connecting atmospheric physics with thermal comfort, energy demand and decision-relevant questions.</p><div class="tags"><span class="tag">Adaptation</span><span class="tag">Heat extremes</span><span class="tag">Energy</span></div></div><div class="mini-viz heat"></div><a class="project-link" href="https://www.sciencedirect.com/science/article/abs/pii/S2212095526002907" target="_blank"><span>→</span> Read the research</a></article>
+  <div class="section-head reveal"><div class="section-index">01 — Selected work</div><h2 class="section-title">High-resolution <em>numerical modelling.</em></h2></div>
+  <p class="focus-line reveal">My work combines <strong>atmospheric modelling, urban climate, Earth Observation and data-driven methods</strong> to represent complex environments at high resolution and evaluate how cities respond to heat and adaptation strategies.</p>
+
+  <article class="model-feature reveal">
+    <div class="model-feature-copy">
+      <div class="project-kicker">Numerical modelling · Climate adaptation</div>
+      <h3>From city geometry to climate response.</h3>
+      <p>High-resolution WRF simulations with urban canopy and building-energy models to study heatwaves, urban heat, thermal comfort and adaptation. The Grenoble scene visualises the model grid and 3D urban representation used to connect city-scale morphology with atmospheric processes.</p>
+      <div class="tags"><span class="tag">WRF</span><span class="tag">BEP+BEM</span><span class="tag">200 m</span><span class="tag">Heat adaptation</span><span class="tag">Thermal comfort</span></div>
+    </div>
+    <div class="model-video"><video autoplay muted loop playsinline preload="metadata"><source src="assets/video/grenoble-model.mp4" type="video/mp4"></video></div>
+  </article>
+
+  <div class="project-pair">
+    <article class="project project-compact reveal">
+      <div class="project-copy"><div class="project-kicker">Python package · Scientific software</div><h3>WRFUP</h3><p>An open-source Python package that automates Earth Observation-based urban parameter generation and ingestion for WRF, making high-resolution urban simulations easier to build and reproduce.</p><div class="tags"><span class="tag">Python</span><span class="tag">WRF</span><span class="tag">Earth Observation</span><span class="tag">Open source</span></div></div>
+      <img class="project-logo project-logo-center" src="https://raw.githubusercontent.com/jacobogabeiraspenas/wrfup/main/docs/source/_static/logo_wrfup.png" alt="WRFUP logo">
+      <a class="project-link" href="https://github.com/jacobogabeiraspenas/wrfup" target="_blank"><span>→</span> Explore WRFUP</a>
+    </article>
+    <article class="project project-compact reveal">
+      <div class="project-copy"><div class="project-kicker">Earth Observation · Machine learning</div><h3>Global Urban Surface ML</h3><p>A workflow for estimating urban morphology parameters from Earth Observation and LiDAR and transforming them into model-ready physical descriptors.</p></div>
+      <div class="project-media"><img src="assets/images/gus-ml.png" alt="Global Urban Surface ML example over Grenoble"></div>
+      <a class="project-link" href="https://github.com/jacobogabeiraspenas/global-urban-surface-ml" target="_blank"><span>→</span> View repository</a>
+    </article>
   </div>
 </section>
-<div id="research" class="research-shell"><section class="section wrap">
-  <div class="section-head reveal"><div class="section-index">02 — Research</div><h2 class="section-title">A toolkit built around <em>models, data & code.</em></h2></div>
-  <div class="research-grid">
-    <article class="research-card reveal"><div class="num">01 / MODELLING</div><h3>Physical modelling</h3><p>Numerical modelling of environmental systems, from atmospheric dynamics and heatwaves to urban energy and human exposure.</p></article>
-    <article class="research-card reveal"><div class="num">02 / DATA</div><h3>Earth Observation & geospatial data</h3><p>Satellite, LiDAR and spatial workflows for extracting physical information from complex real-world environments.</p></article>
-    <article class="research-card reveal"><div class="num">03 / SOFTWARE</div><h3>Scientific computing</h3><p>Python, HPC, reproducible workflows, open-source software and visualization — with an emphasis on tools other people can actually use.</p></article>
-    <article class="research-card reveal"><div class="num">04 / ML</div><h3>Machine learning for science</h3><p>Random forests, gradient boosting, CNNs and data-driven approaches — especially where they complement physical understanding rather than replace it.</p></article>
-  </div>
-</section></div>
 <section id="papers" class="section wrap">
-  <div class="section-head reveal"><div class="section-index">03 — Publications</div><h2 class="section-title">Selected <em>papers.</em></h2></div>
+  <div class="section-head reveal"><div class="section-index">02 — Publications</div><h2 class="section-title">Selected <em>papers.</em></h2></div>
   <div class="papers reveal">
     <a class="paper" href="https://www.sciencedirect.com/science/article/abs/pii/S2212095526002907" target="_blank"><div class="year">2026</div><h3>Evaluating urban heat adaptation strategies for extreme heatwaves in complex terrain: A case study of Grenoble, France</h3><div><div class="journal">Urban Climate</div><div class="status">First author · Published</div></div><div class="arr">↗</div></a>
     <a class="paper" href="https://www.sciencedirect.com/science/article/pii/S2212095525002238" target="_blank"><div class="year">2025</div><h3>Adaptation and mitigation of outdoor heat stress and building energy consumption during a heat wave in Nicosia, Cyprus</h3><div><div class="journal">Urban Climate</div><div class="status">Co-author · Published</div></div><div class="arr">↗</div></a>
@@ -118,18 +135,18 @@ button{font:inherit}
   </div>
 </section>
 <section id="about" class="section wrap">
-  <div class="section-head reveal"><div class="section-index">04 — About</div><h2 class="section-title">Curious by default. <em>Not boxed in.</em></h2></div>
+  <div class="section-head reveal"><div class="section-index">03 — About</div><h2 class="section-title">Physics, computation & <em>environmental systems.</em></h2></div>
   <div class="about">
-    <div class="about-left reveal"><img class="about-photo" src="jacobo.jpg" alt="Jacobo Gabeiras"><div class="location">Environmental physicist · PhD<br>Université Grenoble Alpes</div></div>
-    <div class="about-right reveal"><h2>I like problems where <span>physics, computation and data</span> meet.</h2><p>My doctorate focused on urban climate modelling and climate adaptation, and that remains a strong part of my background. But I do not see myself as limited to one application area. I’m interested in modelling complex systems, scientific machine learning, Earth observation, geospatial data, environmental prediction and research software — and I’m open to moving into adjacent fields where that toolkit is useful.</p><p>I have worked across academia and industry, including Université Grenoble Alpes, UNSW Sydney, GMV Aerospace & Defence and Deloitte Spain, and taught machine learning for environmental fluid mechanics at Master’s level.</p><div class="openness"><span>Physical modelling</span><span>Machine learning</span><span>Climate & environment</span><span>Earth observation</span><span>Scientific software</span><span>New directions welcome</span></div></div>
+    <div class="about-left reveal"><img class="about-photo" src="assets/images/jacobo.jpg" alt="Jacobo Gabeiras"><div class="location">Environmental physicist · PhD<br>Université Grenoble Alpes</div></div>
+    <div class="about-right reveal"><h2>I work where <span>physics, computation and data</span> meet.</h2><p>My core expertise is in high-resolution atmospheric and urban climate modelling, climate adaptation, Earth Observation and scientific computing. During my PhD at Université Grenoble Alpes, I developed modelling workflows and open-source tools to connect urban morphology, heat exposure, thermal comfort and building energy demand.</p><p>My broader technical background includes machine learning, geospatial analysis, HPC and reproducible research software. I have worked across academia and industry, including Université Grenoble Alpes, UNSW Sydney, GMV Aerospace & Defence and Deloitte Spain, and taught machine learning for environmental fluid mechanics at Master’s level.</p><div class="openness"><span>Numerical modelling</span><span>Climate adaptation</span><span>Earth Observation</span><span>Machine learning</span><span>Scientific software</span><span>Geospatial data</span></div></div>
   </div>
 </section>
 <section id="outside" class="section wrap">
-  <div class="section-head reveal"><div class="section-index">05 — Outside work</div><h2 class="section-title">Mountains, waves & <em>movement.</em></h2></div>
+  <div class="section-head reveal"><div class="section-index">04 — Outside work</div><h2 class="section-title">Mountains, waves & <em>movement.</em></h2></div>
   <p class="life-intro reveal">Science is a big part of what I do, not all of who I am. I spend a lot of my free time outdoors and in sport — usually chasing snow, waves, mountains or a golf ball.</p>
-  <div class="life reveal"><div class="life-card"><img src="snowboard.png" alt="Snowboarding"><span>Snowboard</span></div><div class="life-card"><img src="ski.png" alt="Skiing"><span>Ski</span></div><div class="life-card"><img src="surf.png" alt="Surfing"><span>Surf</span></div><div class="life-card"><img src="golf.png" alt="Golf"><span>Golf</span></div></div>
+  <div class="life reveal"><div class="life-card"><img src="assets/sports/snowboard.png" alt="Snowboarding"><span>Snowboard</span></div><div class="life-card"><img src="assets/sports/ski.png" alt="Skiing"><span>Ski</span></div><div class="life-card"><img src="assets/sports/surf.png" alt="Surfing"><span>Surf</span></div><div class="life-card"><img src="assets/sports/golf.png" alt="Golf"><span>Golf</span></div></div>
 </section>
-<footer class="footer wrap reveal"><h2>Let’s work<span>on something interesting.</span></h2><div class="footer-links"><a class="foot-pill" href="mailto:jacobogabeiras@gmail.com">Email ↗</a><a class="foot-pill" href="https://github.com/jacobogabeiraspenas" target="_blank">GitHub ↗</a><a class="foot-pill" href="Jacobo_Gabeiras_CV.pdf" target="_blank">CV ↗</a></div><div class="footer-bottom"><span>Jacobo Gabeiras · 2026</span><span>Modelling · ML · climate · scientific software</span></div></footer>
+<footer class="footer wrap reveal"><h2>Let’s work<span>on something interesting.</span></h2><div class="footer-links"><a class="foot-pill" href="mailto:jacobogabeiras@gmail.com">Email ↗</a><a class="foot-pill" href="https://github.com/jacobogabeiraspenas" target="_blank">GitHub ↗</a><a class="foot-pill" href="assets/docs/Jacobo_Gabeiras_CV.pdf" target="_blank">CV ↗</a></div><div class="footer-bottom"><span>Jacobo Gabeiras · 2026</span><span>Modelling · ML · climate · scientific software</span></div></footer>
 </main>
 <script>
 const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
